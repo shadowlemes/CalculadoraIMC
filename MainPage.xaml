@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraIMC.MainPage">
+    <Grid>
+    <Image 
+                Source="imagewall.png"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Opacity="0.05"
+                Aspect="AspectFill"
+                />
+    
+    <VerticalStackLayout
+            Padding="100,0"
+            Spacing="10">         
+            
+            <Image
+                Margin="80"
+                Source="imageimc.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Logan IMC image" />
+        
+                
+            <Label
+                Text="Calculadora IMC"
+                TextColor="White"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+        
+            <Frame
+                Background="Transparent">
+                
+            <Label
+                Text="O cálculo do Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está com peso adequado em relação à sua altura. O resultado é expresso em kg/m² e é comparado a faixas de classificação que indicam se a pessoa está abaixo do peso, com peso normal, sobrepeso ou obesidade."
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Descrição sobre IMC" />
+            </Frame>
+
+            <Label
+                x:Name="LblIdade"
+                Text="Qual sua idade:"
+                HorizontalOptions="Center"/>
+                             
+            <Entry
+                WidthRequest="100"
+                Keyboard="Numeric"
+                MaxLength ="3"/>                
+        
+            <Label
+                x:Name="LblAltura"
+                Text="Altura em cm:"
+                HorizontalOptions="Center"/>
+
+            <Entry
+                WidthRequest="100"
+                Keyboard="Numeric"
+                MaxLength ="3"/>
+
+            <Label
+                x:Name="LblPeso"                
+                Text="Peso em Kg"
+                HorizontalOptions="Center"/>
+
+            <Entry
+                WidthRequest="100"
+                Keyboard="Numeric"
+                MaxLength ="3"/>
+
+
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
