@@ -10,19 +10,19 @@
                 Opacity="0.05"
                 Aspect="AspectFill"
                 />
-    
-    <VerticalStackLayout
+
+        <VerticalStackLayout
             Padding="100,0"
-            Spacing="10">         
-            
+            Spacing="10">
+
             <Image
                 Margin="80"
                 Source="imageimc.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="Logan IMC image" />
-        
-                
+
+
             <Label
                 Text="Calculadora IMC"
                 TextColor="White"
@@ -30,11 +30,12 @@
                 HorizontalOptions="Center"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
-        
+
             <Frame
-                Background="Transparent">
-                
-            <Label
+                Background="Transparent"
+                BorderColor="white">
+
+                <Label
                 Text="O cálculo do Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está com peso adequado em relação à sua altura. O resultado é expresso em kg/m² e é comparado a faixas de classificação que indicam se a pessoa está abaixo do peso, com peso normal, sobrepeso ou obesidade."
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
@@ -45,18 +46,20 @@
                 x:Name="LblIdade"
                 Text="Qual sua idade:"
                 HorizontalOptions="Center"/>
-                             
+
             <Entry
+                x:Name="Eidade"
                 WidthRequest="100"
                 Keyboard="Numeric"
-                MaxLength ="3"/>                
-        
+                MaxLength ="3"/>
+
             <Label
                 x:Name="LblAltura"
                 Text="Altura em cm:"
                 HorizontalOptions="Center"/>
 
             <Entry
+                x:Name="Ealtura"
                 WidthRequest="100"
                 Keyboard="Numeric"
                 MaxLength ="3"/>
@@ -67,10 +70,28 @@
                 HorizontalOptions="Center"/>
 
             <Entry
+                x:Name="Epeso"
                 WidthRequest="100"
                 Keyboard="Numeric"
                 MaxLength ="3"/>
 
+
+
+
+            <Frame
+            Background="Transparent"
+                BorderColor="White"
+                WidthRequest="120"
+                Margin="50">
+
+            <Button
+                x:Name="BtnResultado"
+                Text="Calcular"
+                Background="Transparent"
+                TextColor="White"
+                Clicked="OnCounterClicked"/>
+
+            </Frame>
 
         </VerticalStackLayout>
     </Grid>
